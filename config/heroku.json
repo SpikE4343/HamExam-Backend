@@ -6,7 +6,7 @@
   "mongodb": "MONGODB_URI",
   "cors":{
     "whitelist":
-      "http://hamexam.netlify.com"
+      ["http://hamexam.netlify.com"]
   },
   "auth": {
     "token": {
