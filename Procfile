@@ -1,1 +1,1 @@
-web: NODE_ENV=heroku node backend/src/
+web: NODE_ENV=heroku node src/
