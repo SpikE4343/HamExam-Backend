@@ -1,5 +1,7 @@
 'use strict';
 
+const allowCrossDomain = require('./allowCrossDomain');
+
 const handler = require('feathers-errors/handler');
 const notFound = require('./not-found-handler');
 const logger = require('./logger');
