@@ -4,7 +4,7 @@ const globalHooks = require('../../../hooks');
 const hooks = require('feathers-hooks');
 const auth = require('feathers-authentication').hooks;
 
-const ExamCreator = require('./ExamCreator');
+const parseQuestionPool = require('./parseQuestionPool');
 
 exports.before = {
   all: [
@@ -14,7 +14,7 @@ exports.before = {
   ],
   find: [],
   get: [],
-  create: [ExamCreator()],
+  create: [ parseQuestionPool() ],
   update: [],
   patch: [],
   remove: []

@@ -16,21 +16,13 @@ const services = require('./services');
 
 const app = feathers();
 
-var corsOptions = {
-  origin: function(origin, callback){
-    var whitelist = app.get('cors.whitelist');
-    var originIsWhitelisted = whitelist.indexOf(origin) !== -1;
-    callback(originIsWhitelisted ? null : 'Bad Request', originIsWhitelisted);
-  }
-};
-
 app.configure(configuration(path.join(__dirname, '..')));
 
 app.use(compress())
   .options('*', cors())
-  .use(cors(corsOptions))
-  //.use(favicon( path.join(app.get('public'), 'favicon.ico') ))
-  //.use('/', serveStatic( app.get('public') ))
+  .use(cors())
+  .use(favicon( path.join(app.get('public'), 'favicon.ico') ))
+  .use('/', serveStatic( app.get('public') ))
   .use(bodyParser.json({limit: "2mb"}))
   .use(bodyParser.urlencoded({ extended: true }))
   .configure(hooks())
