@@ -1,18 +1,38 @@
 {
   "host": "localhost",
   "port": 3030,
-  "nedb": "../data/",
-  "public": "../public/",
+  "mongodb": "MONGODB_URI",
   "auth": {
     "token": {
-      "secret": "0MxHq8bA0HERenEC7wkghGm3NMsSTEktQT7wQLZfQ9it2g/2upja9i9qadrO7DsqB6Uq4cRC/vXg2Fm1AoKbTQ=="
+      "secret": "FEATHERS_AUTH_SECRET"
     },
     "local": {},
+    "bitbucket": {
+      "clientID": "your bitbucket client id",
+      "clientSecret": "your bitbucket client secret",
+      "permissions": {
+        "scope": ["account"]
+      }
+    },
+    "dropbox": {
+      "clientID": "your dropbox client id",
+      "clientSecret": "your dropbox client secret",
+      "permissions": {
+        "scope": []
+      }
+    },
     "facebook": {
       "clientID": "your facebook client id",
       "clientSecret": "your facebook client secret",
       "permissions": {
         "scope": ["public_profile","email"]
+      }
+    },
+    "github": {
+      "clientID": "your github client id",
+      "clientSecret": "your github client secret",
+      "permissions": {
+        "scope": []
       }
     },
     "google": {
@@ -22,5 +42,5 @@
         "scope": ["profile"]
       }
     }
-  }
+  } 
 }

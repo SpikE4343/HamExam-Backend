@@ -1,8 +1,8 @@
 {
   "host": "hamexam.herokuapp.com",
   "port": 80,
-  "nedb": "NEDB_BASE_PATH",
-  "public": "../public/",
+
+  "mongodb": "MONGODB_URI",
   "cors":{
     "whitelist": [
       "http://hamexam.netlify.com"
