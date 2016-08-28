@@ -27,7 +27,7 @@ var corsOptions = {
 app.configure(configuration(path.join(__dirname, '..')));
 
 app.use(compress())
-  .options('*', cors(corsOptions))
+  .options('*', cors())
   .use(cors(corsOptions))
   //.use(favicon( path.join(app.get('public'), 'favicon.ico') ))
   //.use('/', serveStatic( app.get('public') ))
