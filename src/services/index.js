@@ -1,4 +1,5 @@
 'use strict';
+const examsession = require('./examsession');
 const exam = require('./exam');
 const questionpool = require('./questionpool');
 const authentication = require('./authentication');
@@ -14,4 +15,5 @@ module.exports = function() {
   app.configure(user);
   app.configure(questionpool);
   app.configure(exam);
+  app.configure(examsession);
 };
