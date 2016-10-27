@@ -8,9 +8,9 @@ const parseQuestionPool = require('./parseQuestionPool');
 
 exports.before = {
   all: [
-    // auth.verifyToken(),
-    // auth.populateUser(),
-    // auth.restrictToAuthenticated()
+    auth.verifyToken(),
+    auth.populateUser(),
+    auth.restrictToAuthenticated()
   ],
   find: [],
   get: [],

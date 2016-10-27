@@ -2,45 +2,22 @@
   "host": "localhost",
   "port": 3030,
   "mongodb": "MONGODB_URI",
+  "cors":{
+    "whitelist":
+      ["http://localhost:3030"]
+  },
   "auth": {
+
     "token": {
       "secret": "FEATHERS_AUTH_SECRET"
     },
-    "local": {},
-    "bitbucket": {
-      "clientID": "your bitbucket client id",
-      "clientSecret": "your bitbucket client secret",
-      "permissions": {
-        "scope": ["account"]
-      }
-    },
-    "dropbox": {
-      "clientID": "your dropbox client id",
-      "clientSecret": "your dropbox client secret",
-      "permissions": {
-        "scope": []
-      }
-    },
-    "facebook": {
-      "clientID": "your facebook client id",
-      "clientSecret": "your facebook client secret",
-      "permissions": {
-        "scope": ["public_profile","email"]
-      }
-    },
-    "github": {
-      "clientID": "your github client id",
-      "clientSecret": "your github client secret",
-      "permissions": {
-        "scope": []
-      }
-    },
     "google": {
-      "clientID": "your google client id",
-      "clientSecret": "your google client secret",
+      "clientID": "GOOGLE_AUTH_CLIENT_ID",
+      "clientSecret": "GOOGLE_AUTH_CLIENT_SECRET",
+      "successRedirect": "http://localhost:8080",
       "permissions": {
-        "scope": ["profile"]
+        "scope": ["https://www.googleapis.com/auth/plus.login"]
       }
     }
-  } 
+  }
 }
