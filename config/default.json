@@ -13,7 +13,7 @@
     },
 
     "cookie": {
-      "name": "hameexam-jwt",
+      "name": "hamexam-jwt",
       "httpOnly":false,
       "secure":false
     },
