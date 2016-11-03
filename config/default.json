@@ -1,7 +1,7 @@
 {
-  "host": "localhost",
+  "host": "127.0.0.1",
   "port": 3030,
-  "mongodb": "MONGODB_URI",
+  "mongodb": "localhost",
   "cors":{
     "whitelist":
       ["http://localhost:3030"]
@@ -11,10 +11,17 @@
     "token": {
       "secret": "FEATHERS_AUTH_SECRET"
     },
+
+    "cookie": {
+      "name": "hameexam-jwt",
+      "httpOnly":false,
+      "secure":false
+    },
+
     "google": {
       "clientID": "GOOGLE_AUTH_CLIENT_ID",
       "clientSecret": "GOOGLE_AUTH_CLIENT_SECRET",
-      "successRedirect": "http://localhost:8080",
+      "successRedirect": "http://127.0.0.1:8080/#/loginsuccess",
       "permissions": {
         "scope": ["https://www.googleapis.com/auth/plus.login"]
       }
